@@ -2,18 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// might just use this to raycast and get grid data / position on plane or whatever
 public class BuildCursor : MonoBehaviour
 {
-    BuildObject buildObject;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

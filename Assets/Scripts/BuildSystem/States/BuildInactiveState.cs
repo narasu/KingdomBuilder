@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// when the building system is entirely inactive
 public class BuildInactiveState : State<BuildSystem>
 {
     private FSM<BuildSystem> owner;
@@ -17,13 +18,13 @@ public class BuildInactiveState : State<BuildSystem>
         base.OnEnter();
     }
 
-    public override void OnExit()
-    {
-        base.OnExit();
-    }
-
     public override void OnUpdate()
     {
         base.OnUpdate();
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
     }
 }
