@@ -9,6 +9,14 @@ public class FSM<T>
         get; protected set; 
     }
 
+    public System.Type CurrentState
+    {
+        get
+        {
+            return currentState.GetType();
+        }
+    }
+
     private State<T> currentState;
     private Dictionary<System.Type, State<T>> allStates = new Dictionary<System.Type, State<T>>();
 

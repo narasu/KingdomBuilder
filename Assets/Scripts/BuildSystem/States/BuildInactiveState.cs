@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // when the building system is entirely inactive
-public class BuildInactiveState : State<BuildSystem>
+public class BuildInactiveState : State<BuildManager>
 {
-    private FSM<BuildSystem> owner;
-    private BuildSystem buildSystem;
-    public BuildInactiveState(FSM<BuildSystem> _owner)
+    private FSM<BuildManager> owner;
+    private BuildManager buildSystem;
+    public BuildInactiveState(FSM<BuildManager> _owner)
     {
         owner = _owner;
         buildSystem = owner.Owner;
@@ -16,6 +16,8 @@ public class BuildInactiveState : State<BuildSystem>
     public override void OnEnter()
     {
         base.OnEnter();
+
+        //disable build system
     }
 
     public override void OnUpdate()
@@ -26,5 +28,7 @@ public class BuildInactiveState : State<BuildSystem>
     public override void OnExit()
     {
         base.OnExit();
+
+        //enable build system
     }
 }
